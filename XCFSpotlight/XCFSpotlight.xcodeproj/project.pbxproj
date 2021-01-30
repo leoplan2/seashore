@@ -225,14 +225,17 @@
 		70138C850896BE9A00968C2F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = OTHER_PLUGIN;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Seashore/source/extra";
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = app.seashore.xcfspotlight;
 				PRODUCT_NAME = XCFSpotlight;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Seashore/source/extra";
 				WRAPPER_EXTENSION = mdimporter;
 			};
 			name = Debug;
@@ -240,13 +243,16 @@
 		70138C860896BE9A00968C2F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = OTHER_PLUGIN;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../Seashore/source/extra";
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = app.seashore.xcfspotlight;
 				PRODUCT_NAME = XCFSpotlight;
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Seashore/source/extra";
 				WRAPPER_EXTENSION = mdimporter;
 			};
 			name = Release;

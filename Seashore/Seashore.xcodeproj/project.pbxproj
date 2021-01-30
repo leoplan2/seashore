@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -149,8 +149,7 @@
 		2BF40507227DC8DB0091E1EA /* swapTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF40506227DC8DB0091E1EA /* swapTemplate.png */; };
 		2BF4050A228258A90091E1EA /* HEICExporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF40509228258A90091E1EA /* HEICExporter.m */; };
 		2BF4050C228734690091E1EA /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BF4050B228734690091E1EA /* ImageIO.framework */; };
-		2BFF47FE22067E6400640509 /* PocketSVG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFF47FD22067E6400640509 /* PocketSVG.framework */; };
-		2BFF47FF22067E6400640509 /* PocketSVG.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFF47FD22067E6400640509 /* PocketSVG.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		38E0B06725C3DF190048C069 /* PocketSVG in Frameworks */ = {isa = PBXBuildFile; productRef = 38E0B06625C3DF190048C069 /* PocketSVG */; };
 		56C8A64D1055A1DA0056E36F /* normalTemplate.png in Resources */ = {isa = PBXBuildFile; fileRef = 56C8A64C1055A1DA0056E36F /* normalTemplate.png */; };
 		A80983D70871420900F7412F /* JP2Exporter.m in Sources */ = {isa = PBXBuildFile; fileRef = A80983D50871420900F7412F /* JP2Exporter.m */; };
 		A80EB8A6086F05E300369324 /* JP2 Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A80EB8A5086F05E300369324 /* JP2 Icon.icns */; };
@@ -400,7 +399,6 @@
 			files = (
 				2B70A88B22061F4300E51F69 /* Plugins.framework in Embed Frameworks */,
 				2BD5926921E53B74002D150B /* GIMPCore.framework in Embed Frameworks */,
-				2BFF47FF22067E6400640509 /* PocketSVG.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,7 +657,6 @@
 		2BF405082282589B0091E1EA /* HEICExporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HEICExporter.h; sourceTree = "<group>"; };
 		2BF40509228258A90091E1EA /* HEICExporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HEICExporter.m; sourceTree = "<group>"; };
 		2BF4050B228734690091E1EA /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
-		2BFF47FD22067E6400640509 /* PocketSVG.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PocketSVG.framework; path = ../PocketSVG/PocketSVG.framework; sourceTree = "<group>"; };
 		56C8A64C1055A1DA0056E36F /* normalTemplate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = normalTemplate.png; sourceTree = "<group>"; };
 		A801053106945E1E00A80207 /* GradientTool.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = GradientTool.h; sourceTree = "<group>"; };
 		A801053206945E1E00A80207 /* GradientTool.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = GradientTool.m; sourceTree = "<group>"; };
@@ -1011,12 +1008,12 @@
 				2BF4050C228734690091E1EA /* ImageIO.framework in Frameworks */,
 				2B8BD35621EC71EC00FD9AC5 /* QuartzCore.framework in Frameworks */,
 				2B1F70E821DC983500D6F371 /* CoreServices.framework in Frameworks */,
+				38E0B06725C3DF190048C069 /* PocketSVG in Frameworks */,
 				2B1F70E221DC969500D6F371 /* CoreGraphics.framework in Frameworks */,
 				2BD5926821E53B74002D150B /* GIMPCore.framework in Frameworks */,
 				A84E106408E7A4FB0084BCB7 /* IOKit.framework in Frameworks */,
 				A8BF652708E6FEAB006E9BFC /* Carbon.framework in Frameworks */,
 				A8EDF14C078959C80022BB31 /* Cocoa.framework in Frameworks */,
-				2BFF47FE22067E6400640509 /* PocketSVG.framework in Frameworks */,
 				2BE97F4823CBACB000A09AAC /* Accelerate.framework in Frameworks */,
 				2B1F70DF21DC929A00D6F371 /* ColorSync.framework in Frameworks */,
 				2BD5926121E43795002D150B /* Plugins.framework in Frameworks */,
@@ -1060,7 +1057,6 @@
 		2A37F4AAFDCFA73011CA2CEA /* Seashore */ = {
 			isa = PBXGroup;
 			children = (
-				2BFF47FD22067E6400640509 /* PocketSVG.framework */,
 				2BE76CD121EE937400B6C65F /* Seashore.xcconfig */,
 				2BD5923B21E3DBEF002D150B /* EmbeddedBinaries */,
 				2B08E5C021E28C4C0011037C /* Seashore.entitlements */,
@@ -1816,6 +1812,9 @@
 			dependencies = (
 			);
 			name = Seashore;
+			packageProductDependencies = (
+				38E0B06625C3DF190048C069 /* PocketSVG */,
+			);
 			productInstallPath = "$(HOME)/Applications";
 			productName = Seashore;
 			productReference = A8EDF154078959C80022BB31 /* Seashore.app */;
@@ -1853,6 +1852,9 @@
 				en,
 			);
 			mainGroup = 2A37F4AAFDCFA73011CA2CEA /* Seashore */;
+			packageReferences = (
+				38E0B06525C3DF190048C069 /* XCRemoteSwiftPackageReference "PocketSVG" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -2217,6 +2219,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2BE76CD121EE937400B6C65F /* Seashore.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -2253,6 +2256,7 @@
 		2B1F696C21D70C0700D6F371 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = Seashore.entitlements;
@@ -2260,7 +2264,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2020122701;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 8Q9M9WAC2F;
+				DEVELOPMENT_TEAM = 2N33VTKEX8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../PocketSVG";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
@@ -2273,6 +2277,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 2.5.10;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = app.seashore;
@@ -2300,6 +2305,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2BE76CD121EE937400B6C65F /* Seashore.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -2334,6 +2340,7 @@
 		2B1F696F21D70C0F00D6F371 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_ENTITLEMENTS = Seashore.entitlements;
@@ -2341,7 +2348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2020122701;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = 8Q9M9WAC2F;
+				DEVELOPMENT_TEAM = 2N33VTKEX8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/../PocketSVG";
 				GCC_AUTO_VECTORIZATION = YES;
@@ -2355,6 +2362,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MARKETING_VERSION = 2.5.10;
 				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = app.seashore;
@@ -2408,6 +2416,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38E0B06525C3DF190048C069 /* XCRemoteSwiftPackageReference "PocketSVG" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pocketsvg/PocketSVG.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38E0B06625C3DF190048C069 /* PocketSVG */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38E0B06525C3DF190048C069 /* XCRemoteSwiftPackageReference "PocketSVG" */;
+			productName = PocketSVG;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A37F4A9FDCFA73011CA2CEA /* Project object */;
 }

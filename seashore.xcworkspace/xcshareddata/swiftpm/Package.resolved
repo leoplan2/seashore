@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PocketSVG",
+        "repositoryURL": "https://github.com/pocketsvg/PocketSVG.git",
+        "state": {
+          "branch": null,
+          "revision": "51d4fd9ae48e79207034afdd53f365fc2b9d6068",
+          "version": "2.7.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
